@@ -1,0 +1,44 @@
+ALGORITHM three_nb_add
+VAR
+    var ph:chaine="salut tout le monde.";
+    i,j,k:INTEGER;
+    nbmot:INTEGER=1;
+    nbvoyelle:INTEGER=0;
+
+BEGIN
+//lire une chaine avec le dernier caractere est le point
+  while(ph(ph.leng-1)='.') do 
+    read(ph);
+ 
+
+//calcule de nombre des mots
+ for i:=1 to length(ph) do
+      begin  
+      if(ph[i]=" ") then    nbmot=nbmot+1;
+      end;
+write("le nombre des mots est",nbmot);
+
+
+//calcule de nombre des voyelle
+ for j:=1 to length(ph) do
+     begin
+        switch ph[j] do
+        case 'a':case '0':case :'e' case :'u' case:'y'  case 'A':case '0':case :'E' case :'U' case:'Y'
+            
+          nbvoyelle=nbvoyelle+1;      
+     end;
+
+write("le nombres de voyelle est",nbvoyelle);
+
+
+//calcul de la longueur de la chaine sans espaces
+  for k:=1 to length(chaine) do
+     begin
+         if ((ph[k]=' ') and (chaine[i+1]))  then      ph[k]:= chaine[k+1];
+                     
+     end;
+
+write("la longeur de la chaine est",long(ph));
+
+
+END
